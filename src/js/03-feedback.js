@@ -21,13 +21,13 @@ const formEl = document.querySelector('.feedback-form');
             
       if (formEl.email.value === '' || formEl.message.value === '') {
         alert('все поля должны быть заполнены')
-      }
-
-    console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
-
+      } else {
     event.currentTarget.reset();
+    localStorage.removeItem(STORAGE_KEY);
+    console.log(formData);
+  }
 
-      localStorage.removeItem(STORAGE_KEY); 
+
      
 };
 
